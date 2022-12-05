@@ -1,0 +1,80 @@
+{
+  "users": [
+    {
+      "name": "abhi",
+      "email": "ab@gmail.com",
+      "password": "ab@123",
+      "id": 1
+    },
+    {
+      "email": "sony@gmail.com",
+      "name": "sony",
+      "password": "sony123",
+      "number": 2323434344,
+      "id": 2
+    },
+    {
+      "email": "abhi@gmail.com",
+      "name": "abhi",
+      "password": "abhi123",
+      "number": 2434454545,
+      "id": 3
+    },
+    {
+      "email": "sush@gmail.com",
+      "name": "sush",
+      "password": "sush123",
+      "number": 1212112232,
+      "id": 4
+    },
+    {
+      "email": "gawas@gmail.com",
+      "name": "gawas",
+      "password": "gawas123",
+      "number": 1232323333,
+      "id": 5
+    },
+    {
+      "email": "abhay@gmail.com",
+      "name": "abhay",
+      "password": "abhay123",
+      "number": 2434343433,
+      "id": 6
+    },
+    {
+      "email": "soniya@gmail.com",
+      "name": "soniya",
+      "password": "soniya123",
+      "number": 1323343434,
+      "id": 7
+    },
+    {
+      "email": "bhau@gmail.com",
+      "name": "bhau",
+      "password": "bhau123",
+      "number": 2323232323,
+      "id": 8
+    },
+    {
+      "email": "omkar@gmail.com",
+      "name": "omkar",
+      "password": "omkar123",
+      "number": 1234334343,
+      "id": 9
+    },
+    {
+      "email": "raj@gmail.com",
+      "name": "raj",
+      "password": "raj123",
+      "number": 2432434343,
+      "id": 10
+    },
+    {
+      "email": "bhai@gmail.com",
+      "name": "bhai",
+      "password": "bhai123",
+      "number": 2323434344,
+      "id": 11
+    }
+  ]
+}
