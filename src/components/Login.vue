@@ -50,7 +50,7 @@ export default {
             if (this.name && this.email && this.password) {
 
                 let result = await axios.get(
-                    `http://localhost:3000/users?name=${this.name}&email=${this.email}&password=${this.password}`
+                    `https://vue-todos-app-9fbbd.web.app/users?name=${this.name}&email=${this.email}&password=${this.password}`
                 );
     // To redirect to home page
                 if (result.status == 200 && result.data.length > 0) {
