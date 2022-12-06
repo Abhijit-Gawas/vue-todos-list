@@ -1,18 +1,22 @@
 <template>
 <Header></Header>
 <div class="container">
-    <h1>Add Task</h1>
+    <h1>Add your task</h1>
+    <form @submit.prevent="storeTask()">
     <div class="add-items">
         <div v-if="!isEditing">
-            <input type="text" v-model="task" placeholder="Add Task here">
-            <button class="btn" v-on:click="storeTask">Add Task</button>
+            <input type="text" v-model.trim="task" placeholder="Add Task here" autocomplete="off"> 
+            <button class="btn">Add Task</button>
+            <div class="error" v-if="taskErr">{{taskErr}}</div>
         </div>
+        
         <div v-else>
             <input type="text" v-model="task" placeholder="update Task here">
             <button class="btn" v-on:click="updateTask">Update Task</button>
         </div>
     </div>
-   <!-- To display all the Task -->
+</form>
+    <!-- To display all the Task -->
     <table>
         <thead>
             <tr>
@@ -55,15 +59,25 @@ export default {
             selectedIndex: null,
             isEditing: false,
             task: '',
-            title: []
+            title: [],
+            taskErr:''
         }
     },
     methods: {
         // To store Task
         storeTask() {
-            this.title.push(this.task)
-            this.task = ''
+            if(!this.task){
+                this.taskErr= "*This field cannot be blank"
+            }
+
+            if (this.task) {
+                this.title.push(this.task)
+                this.task = ''
+                this.taskErr =''
+            } 
+
         },
+
         //To Edit Task
         editTask(index, task) {
             this.task = task
@@ -79,8 +93,10 @@ export default {
         },
         //To Delete Task
         deleteTask(index) {
-
-            this.title.splice(index, 1)
+            let deteteItem = confirm("Are you sure you want to delete?");
+            if (deteteItem) {
+                this.title.splice(index, 1)
+            }
         },
         //Format date
         format_date(value) {
@@ -121,7 +137,7 @@ h1 {
 }
 
 .add-items {
-    padding: 30px;
+    padding: 20px;
 }
 
 input[type="text"] {
@@ -165,5 +181,12 @@ button {
 
 table {
     width: 100%;
+}
+.error {
+    text-align: start;
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin: 5px 180px 10px 0;
 }
 </style>

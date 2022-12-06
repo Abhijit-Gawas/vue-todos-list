@@ -5,8 +5,7 @@ export default class LoginSignupValidations {
         this.name = name;
         this.email = email;
         this.password = password;
-        this.number = number
-
+        this.number = number;
     }
 
     checkValidations() {
