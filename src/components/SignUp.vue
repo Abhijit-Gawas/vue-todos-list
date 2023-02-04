@@ -107,15 +107,15 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(253, 101, 133, 1)0%, rgba(255, 211, 165, 1)90%);
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(24, 15, 17)0%, rgba(255, 211, 165, 1)90%);
 }
 
 .card {
     box-shadow: 0 5px 10px 0 rgb(0 0 0 / 30%);
     width: 350px;
     height: 500px;
-    border-radius: 10px;
-    padding: 10px 8px;
+    border-radius: 8px;
+    padding: 10px  8px;
 }
 
 .card-title {
